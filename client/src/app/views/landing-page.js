@@ -4,6 +4,8 @@ import Form from "react-bootstrap/Form";
 import NavBar from "react-bootstrap/Navbar";
 import logo from '../../assets/therapme-logo.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Answer from "../components/answers/Answer";
+import AnswerBoard from "../components/answers/AnswerBoard";
 
 function LandingPage() {
     // const { scrollYProgress } = useViewportScroll();
@@ -11,7 +13,7 @@ function LandingPage() {
     // const opacity = useTransform();
 
     //Need clouds as a component?
-      
+
     return (
         <div id="home">
             <NavBar bg="">
@@ -23,7 +25,7 @@ function LandingPage() {
                         className="d-inline-block align-top"
                         alt=""
                     />{' '}
-                    Therap<span style={{color: 'blue'}}>ME</span>
+                    Therap<span style={{ color: 'blue' }}>ME</span>
                 </NavBar.Brand>
             </NavBar>
             <section className="phone-number input box">
@@ -37,7 +39,8 @@ function LandingPage() {
                 <Button className="submit button">Submit</Button>
             </section>
             <section className="message-board">
-                {/* Component + something else */}
+                <AnswerBoard/>
+
 
             </section>
         </div>
