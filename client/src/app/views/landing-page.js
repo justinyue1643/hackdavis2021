@@ -42,7 +42,7 @@ function LandingPage() {
                 </Form>
             </section>
             <section className="message-board">
-                <Question day = "Thursday" text = {"How are you feeling today"} date = {"Jan 15th, 2021"}/>
+                <Question day = "Thursday" date = {"Jan 15th, 2021"}/>
                 <AnswerBoard/>
             </section>
             <Background/>

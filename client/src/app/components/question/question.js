@@ -7,7 +7,7 @@ const Question = ({day, date}) => {
     return (
         <div className = "question-container">
             <div className = "question">
-                {day}: {questions[Math.floor(Math.random() * questions.length)]} {date}
+                {date}-{day}: {questions[Math.floor(Math.random() * questions.length)]}
             </div>
         </div>
     );
