@@ -14,6 +14,7 @@
     top: 50px;
     width: 200px;
     animation: float 11s linear 5s infinite;
+    z-index: 1;
 }
 .cloud2 {
     position: absolute;
@@ -21,6 +22,7 @@
     top: 200px;
     width: 200px;
     animation: float 11s linear 0s infinite;
+    z-index: 1;
 }
 .cloud3 {
     position: absolute;
@@ -28,6 +30,7 @@
     top: 250px;
     width: 200px;
     animation: float 11s 8s infinite;
+    z-index: 1;
 }
 
 @keyframes float {
