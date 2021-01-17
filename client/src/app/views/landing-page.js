@@ -4,7 +4,6 @@ import Form from "react-bootstrap/Form";
 import NavBar from "react-bootstrap/Navbar";
 import logo from '../../assets/therapme-logo.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Answer from "../components/answers/Answer";
 import AnswerBoard from "../components/answers/AnswerBoard";
 
 function LandingPage() {
