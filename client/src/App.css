@@ -4,6 +4,7 @@
   /* text-align: center; */
   background: rgb(212,240,246);
   background: linear-gradient(180deg, rgba(212,240,246,1) 0%, rgba(69,173,163,0) 100%);
+  overflow-x: hidden;
 }
 /*
 .App-logo {
