@@ -6,6 +6,8 @@ import logo from '../../assets/therapme-logo.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Answer from "../components/answers/Answer";
 import AnswerBoard from "../components/answers/AnswerBoard";
+import Cloud from "../components/clouds/Clouds"
+import './landing-page.css'
 
 function LandingPage() {
     // const { scrollYProgress } = useViewportScroll();
@@ -28,15 +30,16 @@ function LandingPage() {
                     Therap<span style={{ color: 'blue' }}>ME</span>
                 </NavBar.Brand>
             </NavBar>
-            <section className="phone-number input box">
+            <Cloud />
+            <section className="phone-number-div">
                 <h2>Get Your First Prompt Today!</h2>
                 <Form className="phone-number">
                     <Form.Label>
                         PHONE NUMBER
                     </Form.Label>
                     <Form.Control className="input box" type="tel" pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' placeholder='202-555-0139' required></Form.Control>
+                    <Button className="submit button" size="lg" type="submit">></Button>
                 </Form>
-                <Button className="submit button">Submit</Button>
             </section>
             <section className="message-board">
                 <AnswerBoard/>

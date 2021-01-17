@@ -1,0 +1,40 @@
+.clouds {
+    position: absolute;
+    overflow: hidden;
+    height:500px;
+    width: 100%;
+    /* color: white; */
+    /* background-color: wheat; */
+    opacity: 0.7;
+}
+
+.cloud1 {
+    position: absolute;
+    left: -20%;
+    top: 50px;
+    width: 200px;
+    animation: float 11s linear 5s infinite;
+}
+.cloud2 {
+    position: absolute;
+    left: -20%;
+    top: 200px;
+    width: 200px;
+    animation: float 11s linear 0s infinite;
+}
+.cloud3 {
+    position: absolute;
+    left: -20%;
+    top: 250px;
+    width: 200px;
+    animation: float 11s 8s infinite;
+}
+
+@keyframes float {
+    from {
+        left: -30%;
+    }
+    to {
+        left: 100%;
+    }
+}
