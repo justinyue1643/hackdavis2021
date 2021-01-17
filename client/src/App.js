@@ -4,11 +4,13 @@ import { Route, BrowserRouter as Router } from "react-router-dom";
 // import logo from './logo.svg';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Background from './app/components/background/background.js'
 import LandingPage from './app/views/landing-page.js';
 
 function App() {
   return (
     <div className="App">
+      <Background/>
       <Router>
         <div className="app-content">
           <Route exact path="/" component={LandingPage}/>
