@@ -1,3 +1,44 @@
 .answer-board {
-    
+    display: flex;
+    flex-direction: column;
+}
+
+.answer-row-left{
+    transform: translate(-25%);
+    animation-name: circle-around-left;
+    animation-duration: 100s;
+    overflow: hidden;
+    animation-iteration-count: infinite;
+    white-space: nowrap;
+    width: 300%
+}
+
+@keyframes circle-around-left {
+    from {
+        margin-left: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+    }
+}
+
+.answer-row-right {
+    transform: translate(-50%);
+    animation-name: circle-around-right;
+    animation-duration: 100s;
+    overflow: hidden;
+    white-space: nowrap;
+    animation-iteration-count: infinite;
+    width: 300%;
+}
+
+@keyframes circle-around-right {
+    from {
+        margin-left: 0%;
+    }
+
+    to {
+        margin-left: 100%;
+    }
 }

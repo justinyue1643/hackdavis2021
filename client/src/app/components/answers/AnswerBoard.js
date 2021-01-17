@@ -1,12 +1,19 @@
 import './AnswerBoard.css';
 import TestJSON from './messages';
 import Answer from './Answer';
+import HorizontalScroll from 'react-scroll-horizontal'
 
-const AnswerRow = ({ answers }) => {
+const AnswerRow = ({animation, answers }) => {
     console.log("section: " + answers);
-    return answers.map((answer, index) => {
-        return <Answer key = {index} textMessage={answer} />
-    });
+    return (
+        <div className = {animation == "left" ? "answer-row-left" : "answer-row-right"}>
+            {
+                answers.map((answer, index) => {
+                    return <Answer key={index} textMessage={answer} />
+                })
+            }
+        </div>
+    );
 }
 
 const AnswerBoard = () => {
@@ -14,10 +21,9 @@ const AnswerBoard = () => {
 
     return (
         <div className="answer-board">
-            <AnswerRow className = "answer-row" answers={messages.slice(0, Math.floor(messages.length / 3))} />
-            <AnswerRow className = "answer-row" answers={messages.slice(Math.floor(messages.length / 3), Math.floor(2 * messages.length / 3))} />
-            <AnswerRow className = "answer-row" answers={messages.slice(Math.floor(2 * messages.length / 3, messages.length))} />
-
+            <AnswerRow animation = "left" answers={messages.slice(0, Math.floor(messages.length / 3))} />
+            <AnswerRow animation = "right" answers={messages.slice(Math.floor(messages.length / 3), Math.floor(2 * messages.length / 3))} />
+            <AnswerRow animation = "left" answers={messages.slice(Math.floor(2 * messages.length / 3, messages.length))} />
         </div>
     );
 }
