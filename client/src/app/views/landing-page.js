@@ -6,6 +6,7 @@ import logo from '../../assets/therapme-logo.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AnswerBoard from "../components/answers/AnswerBoard";
 import Question from "../components/question/question";
+import Cloud from '../components/clouds/clouds';
 
 function LandingPage() {
     // const { scrollYProgress } = useViewportScroll();
@@ -36,14 +37,12 @@ function LandingPage() {
                         PHONE NUMBER
                     </Form.Label>
                     <Form.Control className="input box" type="tel" pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' placeholder='202-555-0139' required></Form.Control>
-                    <Button className="submit button" size="lg" type="submit"></Button>
+                    <Button className="submit button" size="lg" type="submit">Submit</Button>
                 </Form>
             </section>
             <section className="message-board">
                 <Question day = "Thursday" text = {"How are you feeling today"} date = {"Jan 15th, 2021"}/>
                 <AnswerBoard/>
-
-
             </section>
         </div>
     );

@@ -1,6 +1,7 @@
 .answer-board {
     display: flex;
     flex-direction: column;
+    z-index: 1000;
 }
 
 .answer-row-left{

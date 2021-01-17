@@ -1,7 +1,7 @@
 import React from "react";
 
 import Cloud1 from '../../../assets/Cloud 1.png';
-import './Clouds.css'
+import './clouds.css'
 
 function Clouds() {
     return (
