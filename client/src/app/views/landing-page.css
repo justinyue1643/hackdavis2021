@@ -8,5 +8,11 @@
 .phone-number-div {
     position: relative;
     display: block;
-    padding: 100px;
+    padding: 1% 30% 10%;
+}
+.input {
+    height: 100px;
+    width: 13.5rem;
+    margin: auto;
+    font-size: 30px;
 }

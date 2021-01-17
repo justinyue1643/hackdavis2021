@@ -8,6 +8,7 @@ import AnswerBoard from "../components/answers/AnswerBoard";
 import Question from "../components/question/question";
 import Background from "../components/background/background";
 import Cloud from '../components/clouds/clouds';
+import './landing-page.css'
 
 function LandingPage() {
     // const { scrollYProgress } = useViewportScroll();
@@ -37,7 +38,7 @@ function LandingPage() {
                     <Form.Label>
                         PHONE NUMBER
                     </Form.Label>
-                    <Form.Control className="input box" type="tel" pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' placeholder='202-555-0139' required></Form.Control>
+                    <Form.Control className="input box" type="tel" pattern='\d{3}\d{3}\d{4}' placeholder='202-555-0139' required></Form.Control>
                     <Button className="submit button" size="lg" type="submit">Submit</Button>
                 </Form>
             </section>
