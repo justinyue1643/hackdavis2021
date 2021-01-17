@@ -5,8 +5,7 @@ import NavBar from "react-bootstrap/Navbar";
 import logo from '../../assets/therapme-logo.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AnswerBoard from "../components/answers/AnswerBoard";
-import Cloud from "../components/clouds/Clouds"
-import './landing-page.css'
+import Question from "../components/question/question";
 
 function LandingPage() {
     // const { scrollYProgress } = useViewportScroll();
@@ -41,6 +40,7 @@ function LandingPage() {
                 </Form>
             </section>
             <section className="message-board">
+                <Question day = "Thursday" text = {"How are you feeling today"} date = {"Jan 15th, 2021"}/>
                 <AnswerBoard/>
 
 

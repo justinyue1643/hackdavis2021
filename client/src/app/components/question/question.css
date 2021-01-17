@@ -1,0 +1,14 @@
+.question-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.question {
+    background-color: #F9EDCE;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 30px;
+    line-height: 49px;
+}
