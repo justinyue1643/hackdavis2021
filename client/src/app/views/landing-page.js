@@ -6,6 +6,7 @@ import logo from '../../assets/therapme-logo.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AnswerBoard from "../components/answers/AnswerBoard";
 import Question from "../components/question/question";
+import Background from "../components/background/background";
 import Cloud from '../components/clouds/clouds';
 import './landing-page.css'
 
@@ -45,6 +46,7 @@ function LandingPage() {
                 <Question day = "Thursday" text = {"How are you feeling today"} date = {"Jan 15th, 2021"}/>
                 <AnswerBoard/>
             </section>
+            <Background/>
         </div>
     );
 }
