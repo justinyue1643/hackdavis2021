@@ -4,7 +4,6 @@ import Answer from './Answer';
 import HorizontalScroll from 'react-scroll-horizontal'
 
 const AnswerRow = ({animation, answers }) => {
-    console.log("section: " + answers);
     return (
         <div className = {animation == "left" ? "answer-row-left" : "answer-row-right"}>
             {
