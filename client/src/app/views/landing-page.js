@@ -6,6 +6,7 @@ import logo from '../../assets/therapme-logo.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AnswerBoard from "../components/answers/AnswerBoard";
 import Question from "../components/question/question";
+import Background from "../components/background/background";
 
 function LandingPage() {
     // const { scrollYProgress } = useViewportScroll();
@@ -44,6 +45,7 @@ function LandingPage() {
 
 
             </section>
+            <Background/>
         </div>
     );
 }
