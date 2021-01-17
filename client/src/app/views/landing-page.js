@@ -37,11 +37,6 @@ function LandingPage() {
         }
     }
 
-    function onPhoneNumChange(value) {
-        setPhoneNum(value);
-        console.log(phoneNum);
-    }
-
     return (
         <div id="home">
             <NavBar bg="">
