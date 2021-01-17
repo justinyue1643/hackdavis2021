@@ -5,10 +5,42 @@
     /* background-color: blue; */
 }
 
+/* Navbar */
+.logo {
+    width: 50px;
+    height: 50px;
+    animation: spinningLogo 10s linear infinite;
+}
+
+@keyframes spinningLogo {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.navbar-brand {
+    font-size: 2rem !important;
+}
+
+
+
+/* Top Text */
+.welcome-text {
+    font-size: 48px;
+}
+
+/* Phone Number stuff */
 .phone-number-div {
     position: relative;
     display: block;
-    padding: 1% 30% 10%;
+    padding: 1% 30% 5%;
+}
+
+.phone-number {
+    display: inline-flex;
+    padding-top: 1.5rem;
+    padding-left: 5vw;
 }
 .input {
     height: 4rem;
@@ -16,14 +48,50 @@
     width: 21rem;
     margin: auto;
     font-size: 40px;
+    border-color: #C1C1C1;
+    border-width: 2px;
 }
 .input::placeholder {
     color: #B7B7B7;
     padding: 1px;
 }
+.input:focus{
+    border-color: #FF9900 !important;
+    border-width: 2px;
+    box-shadow: none;
+}
 
 .submit {
-    position: absolute;
+    /* position: absolute; */
     background-color: transparent !important;
-    color: black
+    position: relative;
+    right: -1px;
+    color: black;
+    left: -85px;
+    border: transparent;
+}
+
+.submit:hover {
+    color: black !important;
+    /* background-color: black; */
+}
+.submit-arrow {
+    content: url('../../assets/submit-arrow.svg');
+    transition: 400ms;
+}
+.submit-arrow:hover {
+    animation: arrowHover 1s infinite;
+    content: url('../../assets/submit-arrow\(orange\).svg');
+}
+
+@keyframes arrowHover {
+    0% {
+        left: -75px;
+    }
+    50% {
+        left: -85px;
+    }
+    100% {
+        left: -75px;
+    }
 }
