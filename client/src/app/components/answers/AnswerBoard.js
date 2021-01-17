@@ -1,10 +1,11 @@
 import './AnswerBoard.css';
+import { useState, useEffect } from 'react';
 import TestJSON from './messages';
 import Answer from './Answer';
 import HorizontalScroll from 'react-scroll-horizontal'
+import axios from 'axios';
 
 const AnswerRow = ({animation, answers }) => {
-    console.log("section: " + answers);
     return (
         <div className = {animation == "left" ? "answer-row-left" : "answer-row-right"}>
             {
@@ -17,13 +18,32 @@ const AnswerRow = ({animation, answers }) => {
 }
 
 const AnswerBoard = () => {
+    const baseUrl = "http://localhost:8080/https://doitinoneline-twilio.herokuapp.com/";
     const messages = TestJSON["messages"];
+    const [serverMessages, setServerMessages] = useState([]);
+
+    function getServerMessages() {
+        
+    }
+
+    useEffect(() => {
+        axios.get(baseUrl + "text")
+            .then((results) => {
+                var data = results.data;
+                for (let i = 0; i < data.length; i++) {
+                    serverMessages.push(data[i].response);
+                    setServerMessages([...serverMessages, data[i].response])
+                }
+                console.log(serverMessages);
+            })
+            .catch((err) => console.log(err));
+    },[])
 
     return (
         <div className="answer-board">
-            <AnswerRow animation = "left" answers={messages.slice(0, Math.floor(messages.length / 3))} />
-            <AnswerRow animation = "right" answers={messages.slice(Math.floor(messages.length / 3), Math.floor(2 * messages.length / 3))} />
-            <AnswerRow animation = "left" answers={messages.slice(Math.floor(2 * messages.length / 3, messages.length))} />
+            <AnswerRow animation = "left" answers={serverMessages.slice(0, Math.floor(serverMessages.length / 3))} />
+            <AnswerRow animation = "right" answers={serverMessages.slice(Math.floor(serverMessages.length / 3), Math.floor(2 * serverMessages.length / 3))} />
+            <AnswerRow animation = "left" answers={serverMessages.slice(Math.floor(2 * serverMessages.length / 3, serverMessages.length))} />
         </div>
     );
 }
