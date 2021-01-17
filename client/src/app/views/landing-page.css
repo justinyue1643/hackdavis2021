@@ -11,8 +11,19 @@
     padding: 1% 30% 10%;
 }
 .input {
-    height: 100px;
-    width: 13.5rem;
+    height: 4rem;
+    border-radius: 0.8rem;
+    width: 21rem;
     margin: auto;
-    font-size: 30px;
+    font-size: 40px;
+}
+.input::placeholder {
+    color: #B7B7B7;
+    padding: 1px;
+}
+
+.submit {
+    position: absolute;
+    background-color: transparent !important;
+    color: black
 }
