@@ -41,12 +41,12 @@ const AnswerBoard = () => {
 
     return (
         <div className="answer-board">
-            <Question pDate = {0}/>
-            <AnswerRow animation = "left" answers={serverMessages.slice(0, Math.floor(serverMessages.length / 3))} />
-            <Question pDate = {1}/>
-            <AnswerRow animation = "right" answers={serverMessages.slice(Math.floor(serverMessages.length / 3), Math.floor(2 * serverMessages.length / 3))} />
             <Question pDate = {2}/>
             <AnswerRow animation = "left" answers={serverMessages.slice(Math.floor(2 * serverMessages.length / 3, serverMessages.length))} />
+            <Question pDate = {1}/>
+            <AnswerRow animation = "right" answers={serverMessages.slice(Math.floor(serverMessages.length / 3), Math.floor(2 * serverMessages.length / 3))} />
+            <Question pDate = {0}/>
+            <AnswerRow animation = "left" answers={serverMessages.slice(0, Math.floor(serverMessages.length / 3))} />
         </div>
     );
 }
