@@ -51,7 +51,7 @@ function LandingPage() {
             </NavBar>
             <Cloud />
             <section className="phone-number-div">
-                <h2 className="welcome-text">Get Your First Prompt Today!</h2>
+                <h2 className="welcome-text">Share what's on your mind</h2>
                 <Form className="phone-number">
                     <Form.Control
                         className="input box"
