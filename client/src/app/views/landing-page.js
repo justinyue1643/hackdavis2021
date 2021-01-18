@@ -84,8 +84,10 @@ function LandingPage() {
                 </Form>
             </section>
             <section className="message-board">
-                <Question day="Thursday" date={"Jan 15th, 2021"} />
+                <Question pDate={0}/>
                 <AnswerBoard />
+                <Question pDate={1}/>
+                <Question pDate={2}/>         
             </section>
         </div>
     );
